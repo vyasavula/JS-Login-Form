@@ -1,0 +1,78 @@
+//There are three types of variables: var, let and const
+
+//Datatypes: Numbers, Boolean, null, undefined.
+
+
+const name ="John";
+const age = 25;
+const isCool = false;
+const rating = 4.7;
+const x = null;
+const y = undefined;
+let z; //undefined.
+
+//COncatenation
+//Template strings or literals, In es6 we use the backticks ``:
+console.log(`My name is ${name} and I am not ${age} years old`)
+const hello = `How are doing today, Mr.${name}`
+
+//Arrays- Variables that hold mutliple values.
+
+const fruits = ['apples', 'oranges','pears']
+
+fruits[3] = 'grapes'
+
+fruits.push('mangoes')
+fruits.unshift('strawberries')
+console.log(fruits);
+
+
+
+//ES6 Function
+const addNumbers = (num1, num2) => {
+   return  num1 + num2;
+}
+
+console.log(addNumbers(12,58))
+
+
+const subNumbers = (a,b) => {
+    return a-b;
+}
+console.log(subNumbers(20,50))
+
+//Constructor functions
+function Person(firstName, lastName, dob) {
+    this.firstName= firstName;
+    this.lastName=lastName;
+    this.dob=dob;
+    this.getFullName = function() {
+        return `${this.firstName} ${this,lastName}`;
+    }
+}
+//Instantitate the Constructor Object
+const person1 =new Person('john', 'doe','5-5-1647');
+const person2 = new Person('lake', 'view', '1255')
+console.log(person1)
+console.log(person1.getFullName())
+
+
+//COnstructor 2
+function Example(firstName, lastName, dateOfBirth) {
+    this.firstName = firstName;
+    this.lastName =lastName;
+    this.dateOfBirth = dateOfBirth
+
+}
+const person3 =new Example('john', 'doe','5-5-1647');
+const person4 = new Example('lake', 'view', '1255')
+
+//prototype
+Example.prototype.getRealName = function(){
+return `${this.firstName} ${this.lastName}`
+}
+   console.log(person3.getRealName())
+
+
+
+
